@@ -1,0 +1,163 @@
+@charset "utf-8"
+@use "../base/variables" as *
+@use "../base/mixins" as *
+
+footer
+  position: relative
+  overflow: hidden
+
+  .swiper-wrapper
+    transition-timing-function: linear !important
+
+  .swiper-slide img
+    display: block
+    width: 100%
+    max-width: none
+    height: auto
+
+  .footer-inner
+    text-align: center
+
+  .footer-logo
+    display: inline-block
+
+  .footer-address
+    margin-bottom: 0
+    font-weight: 500
+
+  .footer-contact
+    display: -ms-flexbox
+    display: flex
+    -ms-flex-align: center
+    align-items: center
+
+  .contact-group
+    color: #4d4d4d
+    font-family: $font-arial
+    font-weight: 700
+    line-height: 1.75
+
+    span
+      display: inline-block
+
+  .contact-link
+    position: relative
+    color: #0089ce
+    text-decoration: none
+
+  small
+    display: -ms-flexbox
+    display: flex
+    -ms-flex-pack: center
+    justify-content: center
+    color: #4d4d4d
+    font-family: $font-arial
+@media print, (min-width: 768px)
+  footer
+    padding-bottom: 50px
+
+    .swiper-slide
+      width: 368px
+
+    .footer-swiper
+      margin-bottom: 26px
+
+    .footer-inner
+      margin-bottom: -11px
+
+    .footer-logo
+      margin-bottom: 14px
+
+    .footer-address
+      font-size: 0.21rem
+      line-height: 1.5
+
+    .footer-contact
+      margin: 0 -19px 5px
+
+    .contact-group
+      font-size: 0.22rem
+
+      span
+        margin-right: 10px
+
+      &:not(:last-child)
+        margin-right: 23px
+
+      &.secondary
+        margin: 7px 15px 0 0
+
+      &.tertiary span
+        position: relative
+        top: 2px
+        margin-right: 17px
+
+    .contact-link
+      font-size: 0.5rem
+
+      &.text-small
+        font-size: 0.36rem
+
+      &.is-email
+        position: relative
+        top: 2px
+
+    small
+      font-size: 0.23rem
+
+@media only screen and (max-width: 767.98px)
+  footer
+    padding-bottom: 0.85rem
+
+    &::after
+      content: ""
+      position: absolute
+      bottom: 0.7rem
+      left: 50%
+      width: 6.9rem
+      height: 0.08rem
+      -ms-transform: translateX(-50%)
+      transform: translateX(-50%)
+      background: url("../img/common/line_decor_01.png") (left / 0.04rem) 0.08rem repeat-x
+
+    .swiper-slide
+      width: 7.36rem
+
+    .footer-swiper, .footer-inner
+      margin-bottom: 0.17rem
+
+    .footer-logo
+      width: 4.72rem
+      margin-bottom: 0.3rem
+
+    .footer-address
+      font-size: 0.26rem
+      line-height: 1.1538461538
+
+    .footer-contact
+      -ms-flex-wrap: wrap
+      flex-wrap: wrap
+      -ms-flex-pack: center
+      justify-content: center
+      margin: 0 0 0.31rem
+
+    .contact-group
+      margin: 0 0.04rem
+      font-size: 0.22rem
+      line-height: 1.34
+
+      span
+        margin-right: 0.1rem
+
+    .contact-link
+      font-size: 0.5rem
+
+      &.text-small
+        font-size: 0.37rem
+
+    small
+      font-size: 0.28rem
+
+
+
+

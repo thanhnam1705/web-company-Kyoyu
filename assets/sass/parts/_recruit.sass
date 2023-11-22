@@ -1,0 +1,89 @@
+@charset "utf-8"
+@use "../base/variables" as *
+@use "../base/mixins" as *
+
+.section-common-recruit
+  .recruit-inner
+    position: relative
+
+    &::before, &::after
+      content: ""
+      position: absolute
+      left: 50%
+      height: 0.08rem
+      -ms-transform: translateX(-50%)
+      transform: translateX(-50%)
+      background: url("../img/common/line_decor_01.png") (left / 0.04rem) 0.08rem repeat-x
+
+    &::before
+      top: 0
+
+    &::after
+      bottom: 0
+
+  .recruit-title
+    display: -ms-flexbox
+    display: flex
+    -ms-flex-align: center
+    align-items: center
+    letter-spacing: 0
+
+    .text-english
+      color: #e50012
+      font-family: $font-roman
+      font-weight: 400
+
+    .text-japan
+      font-family: $font-micho
+      font-weight: 600
+
+  .recruit-link
+    display: block
+    margin: 0 auto
+
+@media print, (min-width: 768px)
+  .section-common-recruit
+    padding-bottom: 54px
+
+    .recruit-inner
+      padding: 35px 0 52px
+
+      &::before, &::after
+        width: 1000px
+
+    .recruit-title
+      margin-bottom: 6px
+
+      .text-english
+        margin-right: 35px
+        font-size: 0.31rem
+
+      .text-japan
+        font-size: 0.2rem
+
+    .recruit-link
+      width: 1000px
+
+@media only screen and (max-width: 767.98px)
+  .section-common-recruit
+    padding-bottom: 0.41rem
+
+    .recruit-inner
+      padding: 0.3rem 0 0.43rem
+
+      &::before, &::after
+        width: 6.9rem
+
+    .recruit-title
+      -ms-flex-pack: justify
+      justify-content: space-between
+      margin-bottom: 0
+
+      .text-english
+        margin-right: 0.2rem
+        font-size: 0.5rem
+
+      .text-japan
+        padding-top: 0.05rem
+        font-size: 0.25rem
+

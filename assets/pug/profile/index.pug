@@ -1,0 +1,114 @@
+extends ../_layouts/default
+
+block vars
+  -title        = ''
+  -description  = ''
+  -keywords     = ''
+  -pageID       = 'profile'
+  -path         = '..'
+  -imgPC        = path+'/img/'+pageID+'/'
+  -imgSP        = path+'/img/'+pageID+'/sp/'
+
+block container
+  +keyvisual({
+    alt: '会社概要PROFILE',
+    TitleJp: '会社概要',
+    TitleEn: 'PROFILE',
+  })
+
+  section.section-profile
+    .wrapper
+      .profile-content
+        h2.title-common-primary ＫＥＩＹＵ品質で物流の未来を拓く
+        p.profile-detail
+          | 1972年の創業以来、物流企業をクライアントに
+          br
+          | 安定した実績を重ねてきました。
+          br
+          | また“人こそ最大の財産”と捉え、社員教育や研修制度、
+          br
+          | 資格取得支援なども積極的に推進しています。
+          br
+          | これからもより高い価値を創出し、
+          br.sm
+          | 物流の未来に貢献して参ります。
+        span.profile-logo
+          img.image-common.md(src=imgPC+'logo_profile_01.svg' width='325' height='70' alt='京友株式会社 KEIYU Co.,Ltd.' loading='lazy')
+          img.image-common.sm(src=imgSP+'logo_profile_01.svg' width='424' height='89' alt='京友株式会社 KEIYU Co.,Ltd.' loading='lazy')
+  section.section-profile-info
+    .wrapper
+      .info-content
+        .table-outline
+          h2.is-large OUTLINE
+          dl
+            dt 〈設立年月日〉
+            dd 昭和47年５月1日
+            dt 〈資本金〉
+            dd 8,931万円
+            dt 〈本社〉
+            dd
+              address
+                | 〒231-0023
+                br
+                | 神奈川県横浜市中区山下町107-7
+              .outline-info
+                span.info-title 〈代　表〉
+                span
+                  span
+                    | TEL.
+                    a(href='tel:045-662-7401') 045-662-7401
+                    br
+                    | FAX.045-651-3841
+              .outline-info
+                span.info-title 〈建設部〉
+                span
+                  span
+                    | TEL.
+                    a(href='tel:045-226-2466') 045-226-2466
+                    br
+                    | FAX.045-680-0695
+              .outline-map
+                a.map-link.is-first.trans.sm(href='https://goo.gl/maps/rHfGQKXrpBJXkmSFA' target='_blank' rel='noopener')
+                  img.image-common(src=imgSP+'icon_map_01.svg' width='54' height='69' alt='map' loading='lazy')
+                iframe.md(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3250.5316321480564!2d139.64610157640925!3d35.44163074309771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185ce2240e674b%3A0x3ea08677577fc47a!2z5pel5pys44CB44CSMjMxLTAwMjMg56We5aWI5bed55yM5qiq5rWc5biC5Lit5Yy65bGx5LiL55S677yR77yQ77yX4oiS77yXIOODj-OCpOODqeOCpOODleWxseS4i-eUuuODk-ODqw!5e0!3m2!1sja!2s!4v1684863457209!5m2!1sja!2s' width='600' height='450' loading='lazy' referrerpolicy='no-referrer-when-downgrade')
+              p.table-note.md
+                span ◎みなとみらい線《元町・中華街駅》3番出口／徒歩3分
+                span
+                  | ◎JR京浜東北線《石川町
+                  span.is-small （元町・中華街）
+                  | 駅》南口／徒歩10分
+            dt 〈関西〉
+            dd
+              address
+                | 〒658-0033
+                br
+                | 兵庫県神戸市東灘区向洋町西2-1
+              .outline-info.is-modify
+                span
+                  span
+                    | TEL.
+                    a(href='tel:078-857-5663') 078-857-5663
+                    br
+                    | FAX.078-587-5788
+              .outline-map
+                a.map-link.is-second.trans.sm(href='https://goo.gl/maps/puysfge8Bso7tUUi9' target='_blank' rel='noopener')
+                  img.image-common(src=imgSP+'icon_map_01.svg' width='54' height='69' alt='map' loading='lazy')
+                iframe.md(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.488114654939!2d135.253280876386!3d34.69286658363199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008d991ddd03b1%3A0x2f955a1da84aacc9!2z5pel5pys44CB44CSNjU4LTAwMzMg5YW15bqr55yM56We5oi45biC5p2x54GY5Yy65ZCR5rSL55S66KW_77yS5LiB55uu77yRIOOCseOCpOODkuODsw!5e0!3m2!1sja!2s!4v1684863870814!5m2!1sja!2s' width='600' height='450' loading='lazy' referrerpolicy='no-referrer-when-downgrade')
+              p.table-note.md
+                span ◎六甲アイランド線《アイランド北口駅》◇◇出口／徒歩◇分
+        .table-license
+          h2.is-large LICENSE
+          dl.is-blue
+            dt 〈建設業許可〉
+            dd 知事許可（特 - 2）第69880号
+            dt 〈一級建築士事務所登録〉
+            dd 神奈川県知事登録 第11072号
+            dt 〈有資格者〉
+            dd
+              ul.license-list
+                li 一級建築士
+                li 一級建築施工管理技士
+                li 一級電気工事施工管理技士
+                li 二級建築施工管理技士
+
+  include ../_parts/recruit

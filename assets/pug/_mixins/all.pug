@@ -1,0 +1,18 @@
+include ../_parts/keyvisual
+
+mixin servicerItem({image, atl, textJp, textEn,subTitle, text})
+  li.service-item.wow.fade-in-up
+      .service-background.md
+        img.object-common(src=imgPC+image.bg width='1520' height='496' alt=alt loading='eager')
+      .service-wrap
+        figure.service-image
+          img.image-common.md(src=imgPC+image.banner width='418' height='310' alt=alt loading='eager')
+          img.image-common.sm(src=imgSP+image.banner width='750' height='556' alt=alt loading='eager')
+        .service-content
+          h2.service-title
+            span.text-japan!=textJp
+            span.text-english!=textEn
+          h3.service-subtitle!=subTitle
+          p.service-text!=text
+          figure.image-common.service-decor.sm
+            img(src=imgSP+image.decor width='260' height='330' alt=alt loading='eager')

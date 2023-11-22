@@ -1,0 +1,8 @@
+mixin keyvisual({alt, TitleJp, TitleEn})
+  section.section-common-keyvisual
+    figure.keyvisual-thumbnail
+      img.object-common.md(src=imgPC+'background_keyvisual_01.jpg' width='1520' height='496' alt=alt loading='eager')
+      img.object-common.sm(src=imgSP+'background_keyvisual_01.jpg' width='750' height='280' alt=alt loading='eager')
+    h1.keyvisual-title
+      span.title-japanese!=TitleJp
+      span.title-english!=TitleEn

@@ -1,0 +1,132 @@
+extends ../_layouts/default
+
+block vars
+  -title        = ''
+  -description  = ''
+  -keywords     = ''
+  -pageID       = 'recruit'
+  -path         = '..'
+  -imgPC        = path+'/img/'+pageID+'/'
+  -imgSP        = path+'/img/'+pageID+'/sp/'
+
+block container
+  +keyvisual({
+    alt: '採用情報RECRUIT',
+    TitleJp: '採用情報',
+    TitleEn: 'RECRUIT',
+  })
+
+  section.section-experience
+    .wrapper
+      .experience-group
+        .group-content
+          h2.experience-title
+            | 京友では経験、未経験を問わず
+            br
+            | 意欲と向上心のある方を歓迎します
+          p.experience-text
+            | 現在募集中の採用情報はこちらです。
+            br
+            | お電話またはメ―ルにてお気軽にお問い合わせください。
+        figure.group-image
+          img.md(src=imgPC+'img_experience_01.png' width='205' height='241' alt='京友では経験、未経験を問わず<br>意欲と向上心のある方を歓迎します' loading='lazy')
+          img.sm(src=imgSP+'img_experience_01.png' width='205' height='242' alt='京友では経験、未経験を問わず<br>意欲と向上心のある方を歓迎します' loading='lazy')
+      ul.experience-link
+        li.link-item.background-blue
+          a.trans(href='#job') 技術職
+        li.link-item.background-orange
+          a.trans(href='#work') 事務職
+        li.link-item.background-green
+          a.trans(href='#management') 管理職
+      ul.experience-list
+        li.item-image.order-one
+          img.md.image-common(src=imgPC+'img_experience_02.jpg' width='230' height='230' alt='京友では経験、未経験を問わず意欲と向上心のある方を歓迎します' loading='lazy')
+          img.sm.image-common(src=imgSP+'img_experience_02.jpg' width='334' height='334' alt='京友では経験、未経験を問わず意欲と向上心のある方を歓迎します' loading='lazy')
+        li.item-image.order-three
+          img.md.image-common(src=imgPC+'img_experience_03.jpg' width='230' height='230' alt='京友では経験、未経験を問わず意欲と向上心のある方を歓迎します' loading='lazy')
+          img.sm.image-common(src=imgSP+'img_experience_03.jpg' width='334' height='334' alt='京友では経験、未経験を問わず意欲と向上心のある方を歓迎します' loading='lazy')
+        li.item-image.order-four
+          img.md.image-common(src=imgPC+'img_experience_04.jpg' width='230' height='230' alt='京友では経験、未経験を問わず意欲と向上心のある方を歓迎します' loading='lazy')
+          img.sm.image-common(src=imgSP+'img_experience_04.jpg' width='334' height='334' alt='京友では経験、未経験を問わず意欲と向上心のある方を歓迎します' loading='lazy')
+        li.item-image.order-two
+          img.md.image-common(src=imgPC+'img_experience_05.jpg' width='230' height='230' alt='京友では経験、未経験を問わず意欲と向上心のある方を歓迎します' loading='lazy')
+          img.sm.image-common(src=imgSP+'img_experience_05.jpg' width='334' height='334' alt='京友では経験、未経験を問わず意欲と向上心のある方を歓迎します' loading='lazy')
+  .section-link-detail
+    .wrapper
+      ul.detail-list
+        li.detail-item#job
+          .detail-heading
+            span.heading-tag.background-blue 技術職
+            span.heading-text 募集要項
+          .post-content
+            dl.content-list
+              dt 職　種
+              dd.is-bold
+                | 正社員
+
+                ul.list-common-dot
+                  li 土木建設工事及び付帯工事の設計・管理
+              dt 応募資格
+              dd
+                ul.list-common-dot
+                  li 高卒以上、要普通免許
+                  li 一級建築士等の有資格者は優遇
+                  li 建設業経験者
+              dt 就業場所
+              dd
+                a(href='#') 本社
+              dt 勤務時間
+              dd 8:00～17:00
+              dt 休憩時間
+              dd 60分
+              dt 休日・休暇
+              dd
+                | 土曜日・祝祭日・日曜日、有給休暇、夏季・年末年始・
+                br.md
+                | 慶弔休暇あり
+              dt 給与
+              dd 月給○○万円以上（経験を考慮し当社規定による）
+              dt 昇給・賞与
+              dd 昇給年１回、賞与年２回支給
+              dt 諸手当
+              dd 通勤手当全額、時間外手当、住宅手当、家族手当、資格手当
+              dt 福利厚生
+              dd
+                | 社会保険（雇用保険、労災保険、厚生年金保険、健康保険）
+                br.md
+                | 退職金制度、慶弔見舞金制度、資格取得奨励制度
+              dt 退職金
+              dd あり
+              dt 試用期間
+              dd あり
+              dt
+                | 選考
+                br
+                | プロセス
+              dd
+                | 自筆履歴書（写真貼付）、職務経歴書をご郵送ください。
+                br.md
+                | 書類選考後、面接日を連絡します。
+                br
+                address
+                  | 送付先
+                  br
+                  | 〒231-0023
+                  br
+                  | 神奈川県横浜市中区山下町107-7
+                  br
+                  | 京友株式会社「採用係」宛
+        li.detail-item#work
+          .detail-heading
+            span.heading-tag.background-orange 事務職
+            span.heading-text 募集要項
+          .post-content
+            ul.list-character
+              li 現在は募集しておりません
+        li.detail-item#management
+          .detail-heading
+            span.heading-tag.background-green 管理職
+            span.heading-text 募集要項
+          .post-content
+            ul.list-character
+              li 現在は募集しておりません

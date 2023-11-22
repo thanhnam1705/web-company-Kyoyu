@@ -1,0 +1,326 @@
+@charset "utf-8"
+@use "base/base" as *
+@use "parts/header"
+@use "parts/footer"
+@use "parts/button"
+@use "parts/wow"
+@use "parts/recruit"
+
+.section-top-keyvisual
+  position: relative
+  &::before
+    content: ""
+    position: absolute
+    z-index: 4
+    right: 0
+    left: 0
+    pointer-events: none
+
+  .keyvisual-title
+    position: absolute
+    z-index: 3
+    margin-bottom: 0
+    transform: translateX(-50%)
+    color: #fff
+    font-family: $font-micho
+    font-weight: 500
+    letter-spacing: 0.1em
+    writing-mode: vertical-rl
+
+  .keyvisual-subtitle
+    position: absolute
+    z-index: 3
+    margin-bottom: 0
+    color: #fff
+    font-family: $font-roman
+    font-weight: 400
+    letter-spacing: 0
+
+  .keyvisual-image
+    width: 100%
+    height: 100%
+    .is-hide
+      position: absolute
+      z-index: 1
+    .is-show
+      position: relative
+      z-index: 2
+    .animated
+      animation-duration: 4.5s
+
++desktop
+  .section-top-keyvisual
+    height: 756px
+    &::before
+      bottom: -38px
+      height: 162px
+      background: url("../img/common/decoration_keyvisual_02.png") (center / 100%) 100% no-repeat
+      pointer-events: none
+
+    .keyvisual-title
+      position: absolute
+      top: 80px
+      left: calc(50% + 4px)
+      margin-bottom: 0
+      font-size: 0.38rem
+      line-height: 1.6499068901
+
+    .keyvisual-subtitle
+      top: calc(50% - 166px)
+      left: calc(50% + 83px)
+      font-size: 0.19rem
+      line-height: 1.4915789474
+
++mobile
+  .section-top-keyvisual
+    height: 4.72rem
+    &::before
+      bottom: -0.11rem
+      height: 0.8rem
+      background: url("../img/common/sp/decoration_keyvisual_02.png") (center / 100%) no-repeat
+      pointer-events: none
+
+    .keyvisual-title
+      position: absolute
+      top: 0.42rem
+      left: calc(50% + 0.01rem)
+      margin-bottom: 0
+      font-size: 0.28rem
+      line-height: 1.3928571429
+
+    .keyvisual-subtitle
+      top: calc(50% - 1.92rem)
+      left: calc(50% + 0.6rem)
+      font-size: 0.21rem
+      line-height: 1.2380952381
+
+.section-top-intro
+  position: relative
+  z-index: 5
+
+  .intro-title
+    color: #003e6f
+    font-family: $font-micho
+    font-weight: 500
+    letter-spacing: 0.1em
+    text-align: center
+
+  .intro-detail
+    font-family: $font-micho
+    font-weight: 600
+    letter-spacing: 0
+    text-align: center
+
+  .intro-list
+    +reset-list
+    color: #003e6f
+
+  .intro-background::before
+    content: ""
+    position: absolute
+    z-index: 1
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: rgba(62, 58, 57, 0.64)
+    pointer-events: none
+    mix-blend-mode: multiply
+
+  .intro-subtitle
+    font-weight: 500
+    letter-spacing: 0.1em
+    font-family: $font-micho
+
+  .intro-text
+    font-weight: 600
+    letter-spacing: 0
+
+  .list-image
+    +reset-list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    img
+      transition: all 0.4s ease-out
+    li
+      overflow: hidden
+      &:hover img
+        transform: scale(1.1)
+
++desktop
+  .section-top-intro
+    margin-top: -75px
+    padding-bottom: 46px
+
+    .intro-title
+      margin-bottom: 13px
+      font-size: 0.48rem
+      line-height: 1.4375
+
+    .intro-detail
+      margin-bottom: 62px
+      font-size: 0.2rem
+      line-height: 2.1
+
+    .intro-background
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+
+    .intro-inner
+      position: relative
+      z-index: 2
+      min-height: 380px
+
+    .intro-decor
+      content: ""
+      position: absolute
+      z-index: -1
+      top: 0
+      right: 0
+      bottom: 0
+      left: calc(0% + 165px)
+      background: rgba(255, 255, 255, 0.9)
+      clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 102%)
+
+    .intro-main
+      display: -ms-flexbox
+      display: flex
+      position: relative
+      padding: 37px 90px 0 125px
+
+    .intro-image
+      width: 350px
+      margin-left: 65px
+
+    .intro-content
+      flex: 1
+      padding-top: 14px
+
+    .intro-subtitle
+      margin-bottom: 10px
+      font-size: 0.31rem
+      line-height: 1.4348387097
+
+    .intro-text
+      margin-bottom: 9px
+      font-size: 0.17rem
+      line-height: 1.8823529412
+
+    .list-image
+      width: 306px
+      margin: 0 auto
+      li
+        width: 146px
+        height: 146px
+        margin-bottom: 16px
+
+    .button-common-primary
+      margin-left: 76px
+
+    .intro-item
+      position: relative
+      z-index: 1
+      min-height: 496px
+      padding: 59px 0 56px
+      &:not(:last-child)
+        margin-bottom: 34px
+      &.is-reverse
+        .intro-main
+          flex-direction: row-reverse
+          padding: 29px 108px 0 105px
+
+        .intro-content
+          padding-top: 26px
+
+        .intro-image
+          margin: 0 25px 0 auto
+
+        .intro-decor
+          right: calc(0% + 165px)
+          left: 0
+          clip-path: polygon(0 0, 86.8% 0, 98.4% 100%, 0% 100%)
+
+@media print, (max-width: 1400px) and (min-width: 768px)
+  .section-top-intro
+    .intro-decor
+      left: calc(0% + 60px)
+
+    .intro-item.is-reverse .intro-decor
+      right: calc(0% + 60px)
+
++mobile
+  .section-top-intro
+    margin-top: -0.27rem
+    padding-bottom: 0.3rem
+
+    .intro-title
+      margin-bottom: 0.13rem
+      font-size: 0.37rem
+      line-height: 1.4594594595
+
+    .intro-detail
+      margin-bottom: 0.33rem
+      font-size: 0.25rem
+      line-height: 2
+
+    .intro-item
+      position: relative
+      &::before
+        content: ""
+        position: absolute
+        z-index: 5
+        top: 0
+        left: 0
+        height: 100%
+        border-left: solid #003e6f 0.14rem
+      &:not(:last-child)
+        margin-bottom: 0.76rem
+
+    .intro-background
+      position: relative
+      height: 2.44rem
+
+    .intro-inner
+      background: #daeef8
+
+    .intro-main
+      padding: 0.38rem 0.3rem 1.09rem 0.68rem
+      &.is-custom
+        padding-bottom: 0.5rem
+        .button-common-primary
+          bottom: 0.28rem
+
+    .intro-image.is-modify
+      position: relative
+      top: -0.11rem
+      left: -0.09rem
+      width: 6.2rem
+
+    .intro-content
+      margin-bottom: 0.2rem
+
+    .intro-subtitle
+      margin-bottom: 0.15rem
+      font-size: 0.36rem
+      line-height: 1.3611111111
+
+    .intro-text
+      margin-bottom: 0.29rem
+      font-size: 0.28rem
+      line-height: 1.6785714286
+
+    .list-image
+      width: 5.5rem
+      li
+        width: 2.7rem
+        height: 2.7rem
+        margin-bottom: 0.1rem
+
+    .button-common-primary
+      position: absolute
+      right: 0.41rem
+      bottom: 0.22rem

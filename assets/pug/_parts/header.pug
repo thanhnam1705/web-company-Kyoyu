@@ -1,0 +1,27 @@
+header.js-scroll-left( class= pageID=='top' ? 'is-header-top' : '')
+  .header-wrapper
+    a.header-logo.trans(href=path+'/')
+      img.md(src=path+'/img/common/header_logo_01.svg' width='302' height='52' alt='京友株式会社' loading='eager')
+      img.sm(src=path+'/img/common/sp/header_logo_01.svg' width='334' height='56' alt='京友株式会社' loading='eager')
+    .button-menu.js-button-menu.sm
+      .span-wrapper
+        span
+        span
+        span
+      .text-image
+        img.sm.is-open(src=path+'/img/common/sp/txt_menu.svg' width='54' height='22' alt='京友株式会社' loading='eager')
+        img.sm.is-close(src=path+'/img/common/sp/txt_close.svg' width='54' height='22' alt='京友株式会社' loading='eager')
+    nav.header-navigation.js-navigation
+      .header-menu
+        ul.header-list
+          li.header-list-item.md.is-active
+            a.header-list-link(href=path+'/') TOP
+          li.header-list-item.sm.is-active
+            a.header-list-link(href=path+'/') ホーム
+          li.header-list-item
+            a.header-list-link(href=path+'/profile/') 会社概要
+          li.header-list-item
+            a.header-list-link(href=path+'/service/') 事業紹介
+          li.header-list-item.is-modify
+            a.header-list-link(href=path+'/recruit/') 採用情報
+    .overlay-menu.js-menu-overlay.sm

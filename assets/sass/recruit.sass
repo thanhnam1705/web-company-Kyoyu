@@ -1,0 +1,430 @@
+@charset "utf-8"
+@use "base/base" as *
+@use "parts/post"
+@use "parts/header"
+@use "parts/footer"
+@use "parts/wow"
+@use "parts/recruit"
+@use "parts/keyvisual"
+@use "parts/title"
+
+
++desktop
+  .post-content a
+    width: fit-content
+    color: #0089ce
+
++mobile
+  .post-content a
+    width: fit-content
+    color: #00f
+    text-underline-offset: 0.03rem
+
+.list-common-dot, .list-character
+  margin: 0 !important
+  padding: 0 !important
+  list-style-type: none !important
+  font-weight: 400
+
+.list-common-dot li, .list-character li
+  position: relative
+  padding-left: 1em
+  font-family: $font-micho
+
+.list-common-dot li::before, .list-character li::before
+  content: "・"
+  position: absolute
+  top: 1px
+  left: 0
+
+.list-common-dot
+  font-weight: 400
+
+  li::before
+    content: "・"
+
+.list-character
+  font-weight: 600
+
+  li::before
+    content: "※"
+
+.background-blue
+  background: #539ebe
+
+.background-orange
+  background: #f29a6d
+
+.background-green
+  background: #8cc63f
+
+.section-experience
+  position: relative
+
+  .experience-group
+    display: -ms-flexbox
+    display: flex
+
+  .experience-title
+    color: #003e6f
+    font-family: $font-micho
+    font-weight: 500
+    letter-spacing: 0.1em
+
+  .experience-text
+    margin-bottom: 0
+    font-family: $font-micho
+    font-weight: 600
+
+  .experience-link
+    +reset-list
+    padding: 0
+    font-family: "メイリオ", Meiryo, sans-serif
+    font-weight: 700
+
+  .link-item
+    width: 100%
+    text-align: center
+
+    a
+      display: block
+      width: 100%
+      color: #fff
+
+  .experience-list
+    +reset-list
+    display: flex
+    flex-wrap: wrap
+
++desktop
+  .section-experience
+    margin-top: -126px
+    margin-bottom: 17px
+
+    .experience-group
+      margin-bottom: -3px
+      margin-left: 134px
+
+    .group-content
+      margin-right: 17px
+
+    .group-image
+      -ms-flex: 0 0 auto
+      flex: 0 0 auto
+      width: 205px
+      margin-top: -6px
+
+    .experience-title
+      margin-bottom: 20px
+      font-size: 0.32rem
+      line-height: 1.4375
+
+    .experience-text
+      font-size: 0.23rem
+      line-height: 1.8260869565
+
+    .experience-link
+      width: 295px
+      margin: 0 auto 43px
+      font-size: 0.29rem
+
+    .link-item
+      width: 100%
+      min-height: 64px
+
+      a
+        padding: 13px 10px 7px
+
+  .is-mac .section-experience .link-item a
+    padding: 10px
+
+  .section-experience
+    .link-item:not(:last-child)
+      margin-bottom: 14px
+
+    .item-image
+      width: 230px
+      margin-bottom: 25px
+
+      &:not(:last-child)
+        margin-right: 25px
+
++mobile
+  .section-experience
+    margin-top: -0.34rem
+    margin-bottom: 0.33rem
+
+    .experience-group
+      flex-direction: column-reverse
+      align-items: center
+      margin-right: 0.21rem
+      margin-bottom: 0.25rem
+
+    .group-content
+      position: relative
+      z-index: 2
+      text-align: center
+
+    .group-image
+      width: 2.05rem
+      margin-bottom: -0.3rem
+
+    .experience-title
+      margin-bottom: 0.17rem
+      font-size: 0.31rem
+      line-height: 1.4193548387
+
+    .experience-text
+      margin-right: -0.08rem
+      font-size: 0.26rem
+      line-height: 2
+
+  .is-ios .section-experience .experience-text
+    letter-spacing: -0.02rem
+
+  .section-experience
+    .experience-link
+      width: 3.9rem
+      margin: 0 auto 0.43rem
+      font-size: 0.33rem
+
+    .link-item
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 100%
+      min-height: 0.64rem
+
+      a
+        padding: 0.1rem 0.1rem 0.05rem
+
+      &:not(:last-child)
+        margin-bottom: 0.19rem
+
+    .experience-list
+      margin: 0 -0.1rem
+
+    .item-image
+      width: 50%
+      margin-bottom: 0.21rem
+      padding: 0 0.1rem
+
+      &.order-one
+        order: 1
+
+      &.order-two
+        order: 4
+
+      &.order-three
+        -ms-flex-order: 2
+        order: 2
+
+      &.order-four
+        -ms-flex-order: 3
+        order: 3
+
+.section-link-detail
+  .detail-list
+    +reset-list
+  .detail-heading
+    display: -ms-flexbox
+    display: flex
+    position: relative
+    -ms-flex-align: center
+    align-items: center
+
+    &::before
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 50%
+      width: 100%
+      -ms-transform: translateX(-50%)
+      transform: translateX(-50%)
+      background: url("../img/common/line_decor_01.png") (left / 0.04rem) 0.08rem repeat-x
+
+    span
+      display: block
+
+  .heading-tag
+    color: #fff
+    font-family: "メイリオ", Meiryo, sans-serif
+    font-weight: 700
+    text-align: center
+
+  .heading-text
+    position: relative
+    color: #003e6f
+    font-family: $font-micho
+    font-weight: 500
+    letter-spacing: 0.1em
+
+  .content-list
+    display: -ms-flexbox
+    display: flex
+    -ms-flex-wrap: wrap
+    flex-wrap: wrap
+    margin-left: auto
+    font-family: "メイリオ", Meiryo, sans-serif
+
+    .is-bold
+      font-weight: 700
+
+    .list-common-dot li
+      font-family: inherit
+
+    address
+      position: relative
+      padding-left: 1em
+
+      &::before
+        content: "◎"
+        position: absolute
+        top: 0
+        left: 0
+
+    dt
+      font-weight: 400
+
+    dd
+      display: flex
+      -ms-flex-direction: column
+      flex-direction: column
+      -ms-flex-pack: center
+      justify-content: center
+      font-family: "メイリオ", Meiryo, sans-serif
+      font-weight: 400
+
++desktop
+  .section-link-detail
+    margin-bottom: 88px
+
+    .detail-item:not(:last-child)
+      margin-bottom: 72px
+
+    .detail-heading
+      margin-bottom: 25px
+      padding-bottom: 24px
+
+      &::before
+        height: 8px
+
+      span
+        margin-right: 19px
+
+    .heading-tag
+      min-width: 156px
+      min-height: 48px
+      padding: 11px 10px 9px
+      font-size: 0.18rem
+
+    .heading-text
+      font-size: 0.32rem
+      line-height: 1.4375
+
+    .content-list
+      width: 830px
+      font-size: 0.21rem
+      line-height: 1.3333333333
+
+      dt
+        display: flex
+        -ms-flex-align: center
+        align-items: center
+        justify-content: center
+        width: 167px
+        margin-right: 20px
+        padding: 34px 10px 28px
+        border-bottom: 2px solid #fff
+        background: #539ebe
+        color: #fff
+        text-align: center
+
+      dd
+        width: calc(100% - 187px)
+        padding: 16px 27px
+
+        &:not(:last-of-type)
+          border-bottom: 2px solid #e6e6e5
+
+        &:first-of-type
+          position: relative
+
+          &::before
+            content: ""
+            position: absolute
+            top: -2px
+            left: 0
+            width: 100%
+            border-top: 2px solid #e6e6e5
+
+        &:last-of-type
+          position: relative
+
+          &::before
+            content: ""
+            position: absolute
+            bottom: -2px
+            left: 0
+            width: 100%
+            border-top: 2px solid #e6e6e5
+
+    .list-character
+      margin-left: 9px
+      font-size: 0.23rem
+      line-height: 1.8260869565
+
++mobile
+  .section-link-detail
+    margin-bottom: 0.75rem
+
+    .detail-item:not(:last-child)
+      margin-bottom: 0.39rem
+
+    .detail-heading
+      margin-bottom: 0.22rem
+      padding-bottom: 0.22rem
+
+      &::before
+        height: 0.08rem
+
+      span
+        margin-right: 0.25rem
+
+    .heading-tag
+      display: -ms-flexbox !important
+      display: flex !important
+      align-items: center
+      justify-content: center
+      min-width: 1.88rem
+      min-height: 0.42rem
+      padding: 0.07rem 0.1rem 0.03rem
+      font-size: 0.23rem
+
+    .heading-text
+      font-size: 0.37rem
+      line-height: 1.2432432432
+
+    .content-list
+      line-height: 1.3333333333
+
+      dt
+        width: 100%
+        padding: 0.1rem 0 0.01rem
+        border-bottom: 0.02rem solid #e6e6e5
+        color: #539ebe
+        font-size: 0.28rem
+        font-weight: 700
+        line-height: 1.4285714286
+
+      dd
+        width: 100%
+        padding: 0.15rem 0.01rem 0.16rem
+        font-size: 0.27rem
+        font-weight: 400
+        line-height: 1.4814814815
+
+    .list-character
+      margin-left: 0.02rem
+      font-size: 0.26rem
+      line-height: 1.6153846154

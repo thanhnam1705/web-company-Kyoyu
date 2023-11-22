@@ -1,0 +1,80 @@
+extends ../_layouts/default
+
+block vars
+  -title        = ''
+  -description  = ''
+  -keywords     = ''
+  -pageID       = 'service'
+  -path         = '..'
+  -imgPC        = path+'/img/'+pageID+'/'
+  -imgSP        = path+'/img/'+pageID+'/sp/'
+
+block container
+  +keyvisual({
+    alt: '事業紹介SERVICE',
+    TitleJp: '事業紹介',
+    TitleEn: 'SERVICE',
+  })
+
+  section.section-service-intro
+    .wrapper
+      .intro-content
+        h2.intro-title
+          | 物流の舞台を支える
+          br
+          | ３つの部門と
+          br.md
+          | 複合的サービス
+        p.intro-text
+          | 「建設」「リース」「不動産」の
+          br
+          | ３つの部門を有機的に機能させ
+          br
+          | 京友ならではの技術とノウハウをいかして
+          br
+          | 物流ビジネスの成長をサポートしています。
+      figure.intro-image
+        img.md(src='../img/service/intro_img.png' width='500' height='500' alt='物流の舞台を支える３つの部門と複合的サービス' loading='eager')
+        img.sm(src='../img/service/sp/intro_img.png' width='620' height='552' alt='物流の舞台を支える３つの部門と複合的サービス' loading='eager')
+  section.section-service
+    .service-head.md.wow.fade-in-up
+    .service-main
+      ul.service-list
+        +servicerItem({
+          image: {
+            bg: 'service_bg_01.jpg',
+            banner: 'service_img_01.jpg',
+            decor: 'service_decor_01.png'
+          },
+          atl: '建 設 CONSTRUCTION',
+          textJp: '建 設',
+          textEn: 'CONSTRUCTION',
+          subTitle: '大型建設から保守まで<br> 物流施設をトータルサポート',
+          text: '物流の拠点となる物流施設の企画開発から、施工・現場管理・内装改修などの営繕工事まで一貫したサービスを展開。限られたコストの中で、効率的な物流システムを実現する機能性の高い施設の建設と維持・管理を目指します。',
+          })
+        +servicerItem({
+          image: {
+            bg: 'service_bg_02.jpg',
+            banner: 'service_img_02.jpg',
+            decor: 'service_decor_02.png'
+          },
+          atl: 'リース LEASING',
+          textJp: 'リース',
+          textEn: 'LEASING',
+          subTitle: '高い専門性と提案力で<br>ベストな情報とプランを提供',
+          text: '物流現場でもリースの活用が急速に広まっています。取扱い品は搬送機器から大型トラックまで多種多様。豊富な情報の中からニーズに合わせた最適なソリューションを提供し、コスト削減だけでなく環境保全による社会貢献を推進します。',
+          })
+        +servicerItem({
+          image: {
+            bg: 'service_bg_03.jpg',
+            banner: 'service_img_03.jpg',
+            decor: 'service_decor_03.png'
+          },
+          atl: '不動産 REAL ESTATE',
+          textJp: '不動産',
+          textEn: 'REAL ESTATE',
+          subTitle: '顧客ニーズを的確にとらえ<br> 価値ある空間を創造',
+          text: '京友は物流会社をはじめとしたテナント事業も展開。顧客にとって快適で効率のよいオフィス環境を提供し、ビジネスの可能性を広げます。また時代に適合したセキュリティ管理やＩＴインフラなどソフト面のサービスも拡充しています。',
+          })
+
+  include ../_parts/recruit

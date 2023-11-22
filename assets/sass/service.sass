@@ -1,0 +1,257 @@
+@charset "utf-8"
+@use "base/base" as *
+@use "parts/header"
+@use "parts/footer"
+@use "parts/wow"
+@use "parts/recruit"
+@use "parts/keyvisual"
+
+.section-service-intro
+  font-family: $font-micho
+  .intro-title
+    color: #003e6f
+    font-size: 0.31rem
+    font-weight: 500
+    letter-spacing: 0.1em
+  .intro-text
+    font-weight: 600
+    letter-spacing: 0
+
++desktop
+  .section-service-intro
+    margin-top: -91px
+    padding-bottom: 45px
+
+    .wrapper
+      position: relative
+      padding-left: 73px
+
+    .intro-content
+      width: 460px
+
+    .intro-title
+      width: 350px
+      margin-bottom: 15px
+      line-height: 1.4193548387
+
+    .intro-text
+      font-size: 0.23rem
+      line-height: 1.8260869565
+
+    .intro-image
+      position: absolute
+      top: -80px
+      right: 24px
+      width: 500px
+
++mobile
+  .section-service-intro
+    position: relative
+    z-index: 2
+    margin: -0.16rem 0 -0.72rem
+    text-align: center
+
+    .intro-content
+      margin-bottom: -0.08rem
+
+    .intro-title
+      margin-bottom: 0.18rem
+      line-height: 1.3870967742
+
+    .intro-text
+      font-size: 0.26rem
+      line-height: 1.9230769231
+
+    .intro-image
+      width: 6.2rem
+      margin: 0 auto
+
+.section-service
+  .service-list
+    +reset-list
+
+  .service-item
+    position: relative
+
+  .service-title
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    .text-japan
+      font-family: $font-micho
+      font-weight: 500
+      letter-spacing: 0.05em
+    .text-english
+      font-family: $font-roman
+      font-weight: 400
+      letter-spacing: 0
+
+  .service-subtitle
+    font-family: $font-micho
+    font-weight: 500
+    letter-spacing: 0.1em
+
+  .service-text
+    letter-spacing: 0.1em
+
+  .service-image
+    overflow: hidden
+    &:hover img
+      transform: scale(1.1)
+    img
+      transition: all 0.4s ease-out
+
++desktop
+  .section-service
+    padding-bottom: 56px
+
+    .service-head
+      width: 1315px
+      height: 237px
+      margin: 0 auto -102px
+      background: url("../img/service/service_head_bg.png") (center / 100%) auto no-repeat
+
+    .service-item
+      z-index: 1
+      min-height: 496px
+      padding: 44px 0
+      &::before, &::after
+        content: ""
+        position: absolute
+        left: 50%
+        width: 100px
+        height: 21px
+        -ms-transform: translateX(-50%)
+        transform: translateX(-50%)
+        background: url("../img/service/elip_01.png") (center / 100%) auto no-repeat
+      &::before
+        top: -1px
+      &::after
+        bottom: -1px
+        transform: translateX(-50%) rotate(180deg)
+      &:not(:last-child)
+        margin-bottom: 26px
+
+    .service-background
+      position: absolute
+      z-index: -1
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      &::before
+        content: ""
+        position: absolute
+        z-index: 1
+        top: 0
+        bottom: 0
+        left: 50%
+        width: 1370px
+        -ms-transform: translateX(-50%)
+        transform: translateX(-50%)
+        opacity: 0.64
+        background: #3e3a39
+        pointer-events: none
+        mix-blend-mode: multiply
+
+    .service-wrap
+      display: -ms-flexbox
+      display: flex
+      position: relative
+      z-index: 3
+      flex-direction: row-reverse
+      align-items: flex-start
+      width: 1000px
+      min-height: 408px
+      margin: 0 auto
+      padding: 38px 52px 25px 55px
+      background: rgba(255, 255, 255, 0.9)
+      color: #003e6f
+
+    .service-content
+      flex: 1
+
+    .service-title
+      margin-bottom: 3px
+
+      .text-japan
+        font-size: 0.6rem
+
+      .text-english
+        margin: 6px 0 0 65px
+        font-size: 0.16rem
+
+    .service-subtitle
+      margin-bottom: 19px
+      font-size: 0.25rem
+      line-height: 1.56
+
+    .service-text
+      margin-left: 5px
+      font-size: 0.15rem
+      line-height: 1.75
+
+    .service-image
+      width: 418px
+      margin: 9px 0 0 75px
+
++mobile
+  .section-service
+    padding-bottom: 0.68rem
+
+    .service-list
+      overflow: hidden
+
+    .service-item
+      position: relative
+
+      &:not(:last-child)
+        margin-bottom: 0.62rem
+
+        &::after
+          content: ""
+          position: absolute
+          bottom: -0.32rem
+          left: 50%
+          width: 6.9rem
+          height: 0.08rem
+          -ms-transform: translateX(-50%)
+          transform: translateX(-50%)
+          background: url("../img/common/line_decor_01.png") (left / 0.04rem) 0.08rem repeat-x
+
+    .service-content
+      position: relative
+      z-index: 1
+      padding: 0.23rem 0.55rem 0.11rem
+      background: #000
+      color: #fff
+
+    .service-title
+      margin-bottom: 0.15rem
+
+      .text-japan
+        font-size: 0.75rem
+
+      .text-english
+        margin-left: 0.4rem
+        font-size: 0.25rem
+
+    .service-subtitle
+      margin-bottom: 0.19rem
+      font-size: 0.37rem
+      line-height: 1.5135135135
+
+    .service-text
+      width: 6.44rem
+      font-size: 0.26rem
+      line-height: 2.0384615385
+
+    .service-decor
+      position: absolute
+      z-index: -1
+      top: -0.84rem
+      right: 0.09rem
+      width: 2.6rem
+      pointer-events: none
+      &.is-modify
+        right: -0.3rem

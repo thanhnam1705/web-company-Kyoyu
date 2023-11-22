@@ -1,0 +1,106 @@
+extends ./_layouts/default
+
+block vars
+  -title        = ''
+  -description  = ''
+  -keywords     = ''
+  -pageID       = 'top'
+  -path         = '.'
+  -imgPC        = path+'/img/'+pageID+'/'
+  -imgSP        = path+'/img/'+pageID+'/sp/'
+
+block container
+
+  section.section-top-keyvisual.js-appear-menu
+      h1.keyvisual-title.wow.fade-in(data-wow-delay='4s')
+        | 物流を支えることは
+        br
+        | 人々の生活を支えること
+      h2.keyvisual-subtitle.wow.fade-in(data-wow-delay='4s')
+        | Supporting Logistics is
+        br
+        | Supporting Human Lives.
+      figure.keyvisual-image
+        img.object-common.is-hide.md(src=imgPC+'keyvisual_img_01.jpg' width='1520' height='756' alt=' 物流を支えることは人々の生活を支えること' loading='eager')
+        img.object-common.is-hide.sm(src=imgSP+'keyvisual_img_01.jpg' width='750' height='472' alt='物流を支えることは人々の生活を支えること' loading='eager')
+        img.object-common.is-show.md.wow.fade-in(src=imgPC+'keyvisual_img_02.jpg' width='1520' height='756' alt=' 物流を支えることは人々の生活を支えること' loading='eager' data-wow-delay='2s')
+        img.object-common.is-show.sm.wow.fade-in(src=imgSP+'keyvisual_img_02.jpg' width='750' height='472' alt='物流を支えることは人々の生活を支えること' loading='eager' data-wow-delay='2s')
+
+  section.section-top-intro
+    .wrapper
+      h2.intro-title
+        | 社会と物流の未来をつくる
+        br
+        | 総合メンテナンス企業
+      p.intro-detail
+        | “社会の血管”とも言われ、
+        br.sm
+        | 私たちの生活や経済活動に欠かせない物流。
+        br
+        | その流れを滞らせることなく、より効率的に、
+        br.sm
+        | ハードとソフト両面で貢献することが当社のミッションです
+    ul.intro-list
+      li.intro-item
+        .intro-background
+          img.object-common.md(src=imgPC+'intro_bg_01.jpg' width='1520' height='496' alt='創業は1972年世界に誇る物流エリアYOKOHAMAを拠点に' loading='eager')
+          img.object-common.sm(src=imgSP+'intro_bg_01.jpg' width='750' height='244' alt='創業は1972年世界に誇る物流エリアYOKOHAMAを拠点に' loading='eager')
+        .intro-inner
+          .intro-decor.wow.fade-in-right
+          .wrapper
+            .intro-main
+              .intro-content
+                h3.intro-subtitle.wow.fade-in-left
+                  | 創業は1972年
+                  br
+                  | 世界に誇る物流エリア
+                  br
+                  | YOKOHAMAを拠点に
+                p.intro-text.wow.fade-in-up
+                  | 国内・国際物流の要所である横浜を中心に
+                  br
+                  | 高品質なサービスを展開し
+                  br
+                  | 重要な物流インフラを支えてきました。
+                a.trans.button-common-primary(href='./profile/') PROFILE
+              .intro-image
+                ul.list-image
+                  li.wow.fade-in-up
+                    img.object-common.md(src=imgPC+'intro_img_01.png' width='146' height='146' alt='創業は1972年世界に誇る物流エリアYOKOHAMAを拠点に' loading='eager')
+                    img.object-common.sm(src=imgSP+'intro_img_01.png' width='270' height='270' alt='創業は1972年世界に誇る物流エリアYOKOHAMAを拠点に' loading='eager')
+                  li.wow.fade-in-up(data-wow-delay='.5s')
+                    img.object-common.md(src=imgPC+'intro_img_02.png' width='146' height='146' alt='創業は1972年世界に誇る物流エリアYOKOHAMAを拠点に' loading='eager')
+                    img.object-common.sm(src=imgSP+'intro_img_02.png' width='270' height='270' alt='創業は1972年世界に誇る物流エリアYOKOHAMAを拠点に' loading='eager')
+                  li.wow.fade-in-up(data-wow-delay='1s')
+                    img.object-common.md(src=imgPC+'intro_img_03.png' width='146' height='146' alt='創業は1972年世界に誇る物流エリアYOKOHAMAを拠点に' loading='eager')
+                    img.object-common.sm(src=imgSP+'intro_img_03.png' width='270' height='270' alt='創業は1972年世界に誇る物流エリアYOKOHAMAを拠点に' loading='eager')
+                  li.wow.fade-in-up(data-wow-delay='1.5s')
+                    img.object-common.md(src=imgPC+'intro_img_04.png' width='146' height='146' alt='創業は1972年世界に誇る物流エリアYOKOHAMAを拠点に' loading='eager')
+                    img.object-common.sm(src=imgSP+'intro_img_04.png' width='270' height='270' alt='創業は1972年世界に誇る物流エリアYOKOHAMAを拠点に' loading='eager')
+      li.intro-item.is-reverse
+        .intro-background
+          img.object-common.md(src=imgPC+'intro_bg_02.jpg' width='1520' height='496' alt='創業は1972年世界に誇る物流エリアYOKOHAMAを拠点に' loading='eager')
+          img.object-common.sm(src=imgSP+'intro_bg_02.jpg' width='750' height='244' alt='創業は1972年世界に誇る物流エリアYOKOHAMAを拠点に' loading='eager')
+        .intro-inner
+          .intro-decor.wow.fade-in-left
+          .wrapper
+            .intro-main.is-custom
+              .intro-content
+                h3.intro-subtitle.wow.fade-in-right
+                  | 建設・リース・不動産
+                  br
+                  | ３つの部門が織りなす
+                  br
+                  | ファシリティマネジメント
+                p.intro-text.wow.fade-in-up
+                  | 各部門の豊富な経験と専門知識を活かし
+                  br
+                  | ニーズに応じた最適なサービスを
+                  br
+                  | 個の力とチームワークで提供しています。
+                a.trans.button-common-primary(href='./service/') SERVICE
+              .intro-image.is-modify.wow.fade-in-up
+                img.image-common.md(src=imgPC+'intro_img_05.png' width='350' height='350' alt='建設・リース・不動産３つの部門が織りなすファシリティマネジメント' loading='eager')
+                img.image-common.sm(src=imgSP+'intro_img_05.png' width='620' height='620' alt='建設・リース・不動産３つの部門が織りなすファシリティマネジメント' loading='eager')
+
+  include ./_parts/recruit

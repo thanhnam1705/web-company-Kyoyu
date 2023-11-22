@@ -1,0 +1,47 @@
+@charset "utf-8"
+@use "../base/variables" as *
+@use "../base/mixins" as *
+
+.button-common-primary
+  display: inline-flex
+  -ms-flex-align: center
+  align-items: center
+  -ms-flex-pack: center
+  justify-content: center
+  border: solid #fff 0.02rem
+  color: #003e6f
+  font-family: $font-arial
+  font-weight: 400
+  letter-spacing: 0
+  text-align: center
+  &::before
+    content: ""
+    position: relative
+    -ms-flex: 0 0 auto
+    flex: 0 0 auto
+    background: url("../img/common/icn_arrow_01.svg") (center / 100%) auto no-repeat
+
++desktop
+  .button-common-primary
+    min-width: 158px
+    min-height: 40px
+    padding: 6px 10px 4px
+    border-radius: 19px
+    font-size: 0.15rem
+    &::before
+      right: 9px
+      width: 20px
+      height: 10px
+      margin-right: -6px
+
++mobile
+  .button-common-primary
+    min-width: 2.25rem
+    min-height: 0.57rem
+    padding: 0.07rem 0.36rem 0.04rem 0.2rem
+    border-radius: 0.27rem
+    font-size: 0.21rem
+    &::before
+      width: 0.3rem
+      height: 0.2rem
+      margin-right: 0.04rem
